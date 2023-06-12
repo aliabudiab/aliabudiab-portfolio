@@ -8,8 +8,9 @@ import { EmailIcon } from "@/components/icons";
 import Typewriter from "typewriter-effect";
 
 const Home: NextPage = () => {
+  // TODO: Optimize and restructure the ProfileCard component for enhanced maintainability and organization. Move it to a separate folder to improve project structure and modularity.
   const ProfileCard: FC = () => (
-    <div className="flex h-full w-full flex-col items-start justify-start bg-black lg:w-1/2">
+    <div className="flex w-full flex-col items-start justify-start bg-black lg:w-1/2">
       <div className="linear-bg flex w-full flex-1 flex-col justify-between rounded-[30px]">
         <div className="flex w-full items-center justify-between">
           <p className="text-sm font-normal text-white">Contact me</p>
@@ -42,11 +43,16 @@ const Home: NextPage = () => {
             </h1>
             <div></div>
           </div>
-          <div className="w-full text-left text-sm font-normal text-[#ffffffb3]">
-            <p>
-              Acoustic system and{" "}
-              <u className="text-white">technological research</u> in the
-              processes of creating materials for the construction of factories.
+          <div className="w-full text-left">
+            <p className="text-justify text-sm font-normal text-[#ffffffb3]">
+              In the realm of <u className="text-white">Software Engineering</u>
+              , I am recognized for my proficiency, analytical thinking,
+              productivity, adaptability, and precision. Collaborating with my
+              qualified teammates, we strive to deliver exceptional solutions,
+              solve intricate problems, meet critical deadlines, embrace
+              cutting-edge technologies, and ensure the utmost precision in code
+              craftsmanship. Together, we continuously push the boundaries of
+              innovation and excellence.
             </p>
           </div>
         </div>
@@ -95,8 +101,8 @@ const Home: NextPage = () => {
           content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
         />
       </Head>
-      <main className="mx-auto w-full max-w-[1440px] flex-1 py-[10px]">
-        <section className="h-[100%] w-full">
+      <main className="flex w-full flex-1 flex-col py-[10px]">
+        <section className="flex w-full flex-1 flex-wrap gap-3 md:flex-nowrap">
           <ProfileCard />
         </section>
       </main>

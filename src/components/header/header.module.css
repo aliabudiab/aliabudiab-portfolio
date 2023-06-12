@@ -2,7 +2,6 @@
     padding: 5px;
     height: 55px;
     width: 100%;
-    max-width: 1440px;
     background-color: #2e2e2e;
     @apply mx-auto flex justify-between rounded-[30px];
 }

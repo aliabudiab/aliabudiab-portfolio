@@ -8,7 +8,7 @@ import "@/styles/globals.css";
 
 const MyApp: AppType = ({ Component, pageProps }: AppProps) => {
   return (
-    <div className="flex h-screen min-h-screen flex-col overflow-y-auto p-[10px]">
+    <div className="mx-auto flex min-h-screen w-full max-w-[1440px] flex-col overflow-y-auto p-[10px]">
       <Header />
       <ScreenLoader />
       <Component {...pageProps} />
