@@ -1,0 +1,13 @@
+.social-link {
+    width: 45px;
+    border: 1px solid #999;
+    @apply flex h-full items-center justify-center rounded-full bg-transparent hover:bg-white;
+}
+
+.social-link svg path {
+    fill: white;
+}
+
+.social-link:hover svg path {
+    fill: black;
+}

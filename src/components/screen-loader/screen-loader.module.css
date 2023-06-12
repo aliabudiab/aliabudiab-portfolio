@@ -1,0 +1,79 @@
+@keyframes scaleText {
+    from {
+        transform: scale(1.5);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes expand {
+    from {
+        width: 0;
+    }
+    to {
+        width: 50vmax;
+    }
+}
+
+@keyframes backgroundChange {
+    from {
+        background-color: white;
+    }
+    to {
+        background-color: black;
+    }
+}
+
+@keyframes colorChange {
+    from {
+        color: black;
+    }
+    to {
+        color: white;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+.loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: white;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    animation: fadeOut 0.5s linear 5s forwards, backgroundChange 0.5s linear 3s forwards;
+}
+
+.load-text {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    font-size: 10vmax;
+    width: fit-content;
+    display: flex;
+    animation: colorChange 0.5s linear 3s forwards;
+}
+
+.loaded-text {
+    transform: scale(1.5);
+    animation: scaleText 0.5s linear 0.5s forwards;
+}
+
+.loading-text {
+    width: 0;
+    overflow: hidden;
+    animation: expand 1s linear 1.5s forwards;
+    white-space: nowrap;
+}
