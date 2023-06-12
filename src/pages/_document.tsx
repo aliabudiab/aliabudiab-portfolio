@@ -51,6 +51,7 @@ export default function Document() {
         />
         <link rel="manifest" href="/site.webmanifest" />
 
+        <meta name="theme-color" content="#000000" />
         <meta name="language" content="English" />
         <meta name="owner" content="Ali Abu Diab" />
         <meta name="copyright" content="Ali Abu Diab(c) 2023" />

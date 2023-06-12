@@ -6,13 +6,18 @@ import BaseLink from "../base";
 
 import styles from "./social-link.module.css";
 
-const SocialLink: FC<SocialLinkProps> = ({ href, title, icon }) => {
+const SocialLink: FC<SocialLinkProps> = ({
+  href,
+  title,
+  icon,
+  target = "_blank",
+}) => {
   return (
     <BaseLink
       title={title}
       key={title}
       href={href}
-      target="_blank"
+      {...(target ? {target} : {})}
       tabIndex={0}
       linkClassName={`${styles["social-link"]}`}
     >
