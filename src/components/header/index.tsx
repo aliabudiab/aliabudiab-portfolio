@@ -47,8 +47,9 @@ const Header: FC = () => {
           ))}
 
           <BaseLink
-            href="https://drive.google.com/uc?export=download&id=1PX0L2bsX6zSbIoAdwPdDlXwsJnI_SODn"
+            href="https://drive.google.com/file/d/1PX0L2bsX6zSbIoAdwPdDlXwsJnI_SODn/view?usp=sharing"
             linkClassName="flex h-full items-center justify-center rounded-[30px] border-[1px] border-[#999] bg-[#ffffff33] px-6 text-sm tracking-[-0.03em] text-[#c5c5c5] hover:bg-white hover:text-black"
+            target="_blank"
             tabIndex={0}
           >
             Download Resume
