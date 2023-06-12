@@ -95,7 +95,7 @@ const Home: NextPage = () => {
           content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
         />
       </Head>
-      <main className="mx-auto w-full max-w-[1440px] flex-1 py-20">
+      <main className="mx-auto w-full max-w-[1440px] flex-1 py-[10px]">
         <section className="h-[100%] w-full">
           <ProfileCard />
         </section>
