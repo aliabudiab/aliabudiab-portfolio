@@ -16,7 +16,7 @@ const Home: NextPage = () => {
           <p className="text-sm font-normal text-white">Contact me</p>
           <SocialLink
             key="Email"
-            href="mailto:aliabudiab112@gmail.com"
+            href="mailto:hello@aliabudiab.com"
             title="Email"
             target=""
             icon={<EmailIcon />}
