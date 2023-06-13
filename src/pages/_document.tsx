@@ -18,6 +18,7 @@ export default function Document() {
           content="software engineer, frontend engineer, Nuxt, Next, React, Vue, web applications, personal website, Ali Abu Diab, Ali, Abu Diab, علي أبودياب, علي"
         />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
 
         <link rel="icon" href="/favicon.ico" />
         <link

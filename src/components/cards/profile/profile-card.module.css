@@ -1,0 +1,15 @@
+.img-bg::before {
+    background-position: 50%;
+    background-size: cover;
+    border-radius: inherit;
+    content: "";
+    height: 100%;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transition: inherit;
+    width: 100%;
+    z-index: -2;
+    background-image: url(../../../assets/images/Ali_AD.png);
+}
