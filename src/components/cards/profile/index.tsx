@@ -47,8 +47,8 @@ const ProfileCard: FC = () => {
           <div className="w-full text-left">
             <BaseDescription
               description="In the realm of [Software Engineering], I
-              am recognized for my proficiency, analytical thinking,
-              productivity, adaptability, and precision. Collaborating with my
+              am recognized for my [proficiency], [analytical thinking],
+              [productivity], [adaptability], and [precision]. Collaborating with my
               qualified teammates, we strive to deliver exceptional solutions,
               solve intricate problems, meet critical deadlines, embrace
               cutting-edge technologies, and ensure the utmost precision in code
