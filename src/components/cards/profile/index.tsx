@@ -3,7 +3,7 @@ import { FC } from "react";
 import BaseCard from "@/components/cards/base";
 import SocialLink from "@/components/links/social";
 import { EmailIcon } from "@/components/icons";
-import HighlightText from "@/components/highlight-text";
+import BaseDescription from "@/components/base-description";
 
 import Typewriter from "typewriter-effect";
 
@@ -45,16 +45,16 @@ const ProfileCard: FC = () => {
             </h1>
           </div>
           <div className="w-full text-left">
-            <p className="text-justify text-sm font-normal text-[#ffffffb3]">
-              In the realm of <HighlightText text="Software Engineering" />, I
+            <BaseDescription
+              description="In the realm of [Software Engineering], I
               am recognized for my proficiency, analytical thinking,
               productivity, adaptability, and precision. Collaborating with my
               qualified teammates, we strive to deliver exceptional solutions,
               solve intricate problems, meet critical deadlines, embrace
               cutting-edge technologies, and ensure the utmost precision in code
               craftsmanship. Together, we continuously push the boundaries of
-              innovation and excellence.
-            </p>
+              innovation and excellence."
+            />
           </div>
         </div>
       </div>
@@ -80,15 +80,11 @@ const ProfileCard: FC = () => {
           </div>
 
           <div className="w-full rounded-[30px] rounded-tl-none bg-[#2e2e2e] px-[30px] py-5 text-left">
-            <p className="text-justify text-sm font-normal leading-[1.4] text-[#ffffffb3]">
-              A Software Engineer with 3+ years of experience in building and
-              maintaining visually stunning, user-friendly, and responsive
-              websites. Proficient in <HighlightText text="HTML" />,{" "}
-              <HighlightText text="CSS" />, and{" "}
-              <HighlightText text="modern libraries" />, as well as{" "}
-              <HighlightText text="HTML" /> and{" "}
-              <HighlightText text="frameworks" />.
-            </p>
+            <BaseDescription
+              description="A Software Engineer with 3+ years of experience in building and
+              maintaining visually stunning, user-friendly, and responsive websites. Proficient in [HTML], [CSS], and [JavaScript], 
+              as well as [modern libraries] and [frameworks]."
+            />
           </div>
         </div>
       </div>
