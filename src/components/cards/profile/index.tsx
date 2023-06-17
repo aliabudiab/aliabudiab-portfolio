@@ -14,8 +14,7 @@ const ProfileCard: FC = () => {
   return (
     <BaseCard>
       <div className="flex w-full flex-1 flex-col justify-between rounded-[30px] bg-brown-gradient px-[30px] py-10">
-        <div className="flex w-full items-center justify-between">
-          <p className="text-sm font-normal text-white">Contact me</p>
+        <div className="flex w-full justify-end h-[45px]">
           <SocialLink
             key="Email"
             href="mailto:hello@aliabudiab.com"
