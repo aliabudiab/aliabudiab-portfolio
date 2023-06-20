@@ -21,6 +21,7 @@ export default function Document() {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
 
         <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/ico" href="/favicon.ico" />
         <link
           rel="icon"
           type="image/png"
