@@ -7,7 +7,7 @@ export default function Document() {
         <meta charSet="UTF-8" />
         <meta
           name="description"
-          content="Ali Abu Diab is a software engineer with 3 years of experience in building and maintaining visually stunning, user-friendly, and responsive websites. Proficient in HTML, CSS, and JavaScript, as well as modern libraries and frameworks."
+          content="Ali Abu Diab is a software engineer with 3+ years of experience in building and maintaining visually stunning, user-friendly, and responsive websites. Proficient in HTML, CSS, and JavaScript, as well as modern libraries and frameworks."
         />
         <meta name="revisit-after" content="1 days" />
         <meta name="robots" content="index, follow" />
@@ -61,7 +61,7 @@ export default function Document() {
         <meta property="og:title" content="Ali Abu Diab - Software Engineer" />
         <meta
           property="og:description"
-          content="Ali Abu Diab is a software engineer with 3 years of experience in building and maintaining visually stunning, user-friendly, and responsive websites. Proficient in HTML, CSS, and JavaScript, as well as modern libraries and frameworks."
+          content="Ali Abu Diab is a software engineer with 3+ years of experience in building and maintaining visually stunning, user-friendly, and responsive websites. Proficient in HTML, CSS, and JavaScript, as well as modern libraries and frameworks."
         />
         <meta property="og:url" content="https://aliabudiab.com/" />
         <meta property="og:type" content="website" />
