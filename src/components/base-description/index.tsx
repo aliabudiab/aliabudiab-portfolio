@@ -1,6 +1,6 @@
 import { FC, memo } from "react";
 
-import {
+import type {
   HighlightTextProps,
   BaseDescriptionProps,
 } from "./base-description.types";
