@@ -80,7 +80,7 @@ const ProfileCard: FC = () => {
 
           <div className="w-full rounded-[30px] rounded-tl-none bg-[#2e2e2e] px-[30px] py-5 text-left">
             <BaseDescription
-              description="A Software Engineer with over 3.5 years of experience in building and
+              description="A Software Engineer with over 4 years of experience in building and
               maintaining visually stunning, user-friendly, and responsive websites. Proficient in [HTML], [CSS], and [JavaScript], 
               as well as [modern libraries] and [frameworks]."
             />
