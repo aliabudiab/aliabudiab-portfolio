@@ -10,7 +10,7 @@ const MyApp: AppType = ({ Component, pageProps }: AppProps) => {
   return (
     <div className="mx-auto flex min-h-screen w-full max-w-[1440px] flex-col overflow-y-auto p-[10px]">
       <Header />
-      <ScreenLoader />
+      {/* <ScreenLoader /> */}
       <Component {...pageProps} />
       <Footer />
     </div>
