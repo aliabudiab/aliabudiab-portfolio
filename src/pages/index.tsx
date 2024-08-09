@@ -8,7 +8,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Ali Abu Diab - Software Engineer</title>
+        <title>Ali Abu Diab - Senior Software Engineer</title>
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
