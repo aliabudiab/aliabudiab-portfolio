@@ -47,7 +47,7 @@ const Header: FC = () => {
           ))}
 
           <BaseLink
-            href="https://drive.google.com/file/d/1tSbNVsRvqTIP3kYXNWixHDUZ6SJef-em/view?usp=sharing"
+            href="https://drive.google.com/file/d/1qoRKRcecFS4-HXCeDc53cGzpQCxPaGb3/view?usp=sharing"
             linkClassName="flex h-full items-center justify-center rounded-[30px] border-[1px] border-[#999] bg-[#ffffff33] px-6 text-sm tracking-[-0.03em] text-[#c5c5c5] hover:bg-white hover:text-black"
             target="_blank"
             tabIndex={0}
