@@ -1,38 +1,55 @@
 import Head from "next/head";
 
-import { type NextPage } from "next";
+import { siteConfig } from "@/content/site";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { AboutSection } from "@/components/sections/AboutSection";
+import { ExperienceSection } from "@/components/sections/ExperienceSection";
+import { ProjectsSection } from "@/components/sections/ProjectsSection";
+import { SkillsSection } from "@/components/sections/SkillsSection";
+import { ContactSection } from "@/components/sections/ContactSection";
 
-// import ProfileCard from "@/components/cards/profile";
+const pageTitle = `${siteConfig.name} — ${siteConfig.title}`;
+const pageDescription = `${siteConfig.name} is a ${siteConfig.title} based in ${siteConfig.location}, specializing in Angular, React, Vue, technical leadership, and digital transformation across enterprise platforms.`;
 
-const Home: NextPage = () => {
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: siteConfig.name,
+  jobTitle: siteConfig.title,
+  email: siteConfig.email,
+  url: siteConfig.url,
+  sameAs: siteConfig.socialLinks
+    .filter((link) => link.platform !== "email")
+    .map((link) => link.href),
+};
+
+export default function HomePage() {
   return (
     <>
       <Head>
-        <title>Ali Abu Diab - Senior Software Engineer</title>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href={siteConfig.url} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:url" content={siteConfig.url} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </Head>
-      {/* <main className="flex w-full flex-1 flex-col py-[10px]">
-        <section className="flex w-full flex-1 flex-wrap gap-3 md:flex-nowrap">
-          <ProfileCard />
-        </section>
-      </main> */}
 
-      <main className="flex h-full w-full flex-1 flex-col items-center justify-center">
-        <section className="max-w-lg text-center sm:px-6 sm:py-8">
-          <h1 className="mb-4 text-4xl font-semibold text-white">
-            Exciting Updates Ahead
-          </h1>
-          <p className="text-lg text-gray-300">
-            The website is currently under development. Please check back soon
-            for the latest updates. Stay tuned!
-          </p>
-        </section>
-      </main>
+      <HeroSection />
+      <AboutSection />
+      <ExperienceSection />
+      <ProjectsSection />
+      <SkillsSection />
+      <ContactSection />
     </>
   );
-};
-
-export default Home;
+}

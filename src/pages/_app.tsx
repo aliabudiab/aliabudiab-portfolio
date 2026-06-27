@@ -1,20 +1,32 @@
-import type { AppType, AppProps } from "next/app";
+import type { AppProps } from "next/app";
+import { Inter, JetBrains_Mono } from "next/font/google";
 
-import Header from "@/components/header";
-import ScreenLoader from "@/components/screen-loader";
-import Footer from "@/components/footer";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { PageShell } from "@/components/layout/PageShell";
 
 import "@/styles/globals.css";
 
-const MyApp: AppType = ({ Component, pageProps }: AppProps) => {
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
+});
+
+export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className="mx-auto flex min-h-screen w-full max-w-[1440px] flex-col overflow-y-auto p-[10px]">
+    <div className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
       <Header />
-      {/* <ScreenLoader /> */}
-      <Component {...pageProps} />
+      <PageShell>
+        <Component {...pageProps} />
+      </PageShell>
       <Footer />
     </div>
   );
-};
-
-export default MyApp;
+}

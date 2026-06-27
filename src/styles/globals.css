@@ -2,27 +2,76 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  height: 100%;
-  width: 100%;
-  font-family: "Inter", sans-serif;
-  padding: 0;
-  margin: 0;
-  overflow-x: hidden;
-  background-color: #000;
+@layer base {
+  :root {
+    --background: 240 6% 4%;
+    --foreground: 0 0% 98%;
+    --muted: 240 4% 46%;
+    --surface: 240 5% 8%;
+    --surface-elevated: 240 4% 11%;
+    --border: 0 0% 100% / 0.08;
+    --border-hover: 0 0% 100% / 0.16;
+    --accent: 217 91% 60%;
+    --accent-muted: 217 91% 60% / 0.12;
+    --glow: 217 91% 60% / 0.25;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  ::selection {
+    @apply bg-accent/30 text-foreground;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent/60 ring-offset-2 ring-offset-background;
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --background: 0 0% 99%;
+      --foreground: 240 8% 10%;
+      --muted: 240 4% 46%;
+      --surface: 0 0% 96%;
+      --surface-elevated: 0 0% 100%;
+      --border: 0 0% 0% / 0.08;
+      --border-hover: 0 0% 0% / 0.14;
+      --accent-muted: 217 91% 60% / 0.1;
+      --glow: 217 91% 60% / 0.18;
+    }
+  }
 }
 
-h1,
-h2 {
-  font-family: "Inter", sans-serif;
-}
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-foreground via-foreground to-muted bg-clip-text text-transparent;
+  }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
+  .text-gradient-accent {
+    @apply bg-gradient-to-r from-accent via-sky-300 to-accent bg-clip-text text-transparent;
+  }
 
-:focus {
-  outline: none;
+  .surface-grid {
+    background-image:
+      linear-gradient(to right, hsl(var(--border)) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border)) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 20%, transparent 70%);
+  }
+
+  .noise-overlay {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  }
 }
